@@ -1,12 +1,13 @@
-package com.algo.day20220905;
+package com.algo.y2022.d0905;
 
 /**
+ * 旋转矩阵
  * @author flynn
- * @date 2022/09/11
+ * @date 2022/09/05
  */
 public class RotateMatrix {
 
-        /*
+/*
 题目：
 给你一幅由 N × N 矩阵表示的图像，其中每个像素的大小为 4 字节。请你设计一种算法，将图像旋转 90 度。
 不占用额外内存空间能否做到？
@@ -41,7 +42,7 @@ public class RotateMatrix {
          [12, 6, 8, 9],
          [16, 7,10,11]
      ]
-     */
+*/
 
     /**
      * 思路(评论区学来的)：
@@ -92,34 +93,3 @@ public class RotateMatrix {
 
 }
 
-class TestRotateMatrix {
-
-    public static void main(String[] args) {
-        int[][] matrix1 = {
-                {1, 2, 3},
-                {4, 5, 6},
-                {7, 8, 9}
-        };
-        int[][] matrix2 = {
-                {1, 2, 3},
-                {4, 5, 6},
-                {7, 8, 9}
-        };
-        RotateMatrix instance = new RotateMatrix();
-        instance.rotate(matrix1);
-        instance.rotate(matrix2);
-
-        printMatrix(matrix1);
-        printMatrix(matrix2);
-    }
-
-    private static void printMatrix(int[][] matrix) {
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                System.out.print(matrix[i][j] + ", ");
-            }
-            System.out.println("");
-        }
-        System.out.println("");
-    }
-}
